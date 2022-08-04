@@ -1,3 +1,10 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
+    background-color: #DFF0D8;
+}
+
+h1{
+    color: #854242;
+    text-align: center;
+    
 }

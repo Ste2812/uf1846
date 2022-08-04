@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // TODO: Cambar a tu Conneciton String a MongoDB Atlas; base de datos 'countries'
-const url = 'mongodb://localhost:27017/countries';
+const url = 'mongodb+srv://beetlepush:Muydific1l@cluster0.5w1sd.mongodb.net/countries?retryWrites=true&w=majority';
 
 
 app.set('view engine', 'ejs');
@@ -26,3 +26,4 @@ mongoose.connect(url, { useNewUrlParser: true }, (error) => {
     }
     app.listen(3000);
 });
+

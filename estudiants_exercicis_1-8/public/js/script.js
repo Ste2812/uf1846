@@ -1,9 +1,11 @@
 {
-    async function getCountryDetails() {
+    async function getCountryDetails(require, response, data) {
 
         const response = await fetch(`https://restcountries.com/v3.1/name/`);
+       
 
         const data = await response.json();
+       
 
         return data;
 
@@ -24,6 +26,25 @@
             label: 'Perú'
         }
         ]
+
+        
+
+        
+         let selector = document.querySelector("#country");
+       
+         let opt = document.createElement("option");
+
+         const optionText = document.createTextNode('Option Text');
+
+         opt.appendChild(optionText);
+
+         selector.appendChild(opt);
+
+         for(let i=0; i<optionsValues.length; i++){
+         opt.setAttribute(optionsValues.value[i]);
+         }
+    
+        
     }
 
     setDynamicOptions();
@@ -36,9 +57,9 @@
     async function setCountryFlag(event) {
         let countryName = event.target.value;
 
-        let countryData = await getCountryDetails(countryName);
+        //let countryData = await getCountryDetails(countryName);
         // Descomenta la següent línia si no has aconseguit implementar la primera part de l'exercici. Comenta la línia anterior també.   
-        //let countryData = await getCountryDetailsFake(countryName);
+        let countryData = await getCountryDetailsFake(countryName);
 
     }
 

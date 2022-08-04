@@ -12,4 +12,13 @@ exports.postSendData = (req, res) => {
     }
 
     res.send("Dades rebudes:" + JSON.stringify(fakeData));
+
+    const country = database.collection('countries');
+    await country.insertOne({
+        conuntryName: req.body.country,
+        population: req.body.population,
+        urlFlag: req.body.urlFlag
+    });
+    
+    await country.save();
 }

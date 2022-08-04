@@ -19,23 +19,18 @@
 
         </tr>
 
+<% resultsQuery.forEach(function(product) { %>
+
 
         <tr class="w3-hover-blue">
-            <td> Potatoes
+            <td> <%= product.product_name %> </td>
             </td>
-            <td> 40.00
+            <td> <%= product.list_price %> </td>
             </td>
-            <td>Dried Fruit & Nuts
-            </td>
-        </tr>
-        <tr class="w3-hover-blue">
-            <td> Tomatoes
-            </td>
-            <td> 20.00
-            </td>
-            <td>Dried Fruit & Nuts
+            <td> <%= product.category %> </td>
             </td>
         </tr>
+    <% }) %>
 
     </table>
 
